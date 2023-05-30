@@ -1,0 +1,33 @@
+<h3 style="text-align: center;">COUNTER</h3>
+  <div class="col-2">
+    <div class="attempts" id="mats" data-computations-target="materials">
+      <% @materials = @materials["helmet"] %>
+      <% @materials.each do |material| %>
+        <div class="counter" data-amount="<%=material.amount%>" data-name="<%=material.name%>">
+          <%= image_tag(@mats[material.name.to_sym], class:"mat-pic")%>
+          <div class="notification-content" data-action="click->computations#hone" >
+            <h5>0</h5>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <h4 style="text-align: center;" class="mt-4 d-none">ATTEMPTS</h4>
+    <div class="attempts d-none">
+      <div class="d-flex justify-content-between w-100">
+        <p>CURRENT</p>
+        <p><small>9</small></p>
+      </div>
+      <div class="d-flex justify-content-between w-100">
+        <p>TOTAL</p>
+        <p><small><%= @total_attempt_counter %></small></p>
+      </div>
+    </div>
+  </div>
+
+
+<!-- mat_images = {shard: "https://imgur.com/sjexkJA", gold: "https://imgur.com/bECYx7J", silver: "https://imgur.com/sWFzPpF", oreha: "https://imgur.com/BcSu9Iv", leapstone: "https://imgur.com/wioa5ji", destruction: "https://imgur.com/6zti2bC", guardian: "https://imgur.com/JNFBDGK"}
+
+mats"
+
+image_tag (mat_images[mat.name.to_sym], class: "some bs class") -->

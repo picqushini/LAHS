@@ -1,0 +1,22 @@
+.active-item img{
+  box-shadow: 0 0 0 2px $bright-yellow;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: 1px solid #dee2e6;
+}
+
+.selected_item{
+  position: relative;
+  &:after{
+    background-image: url(../../images/DEFINITELY_NOT_STOLEN.png);
+  }
+
+}
+
+.honing-level{
+  right: 388px;
+  bottom: 565px;
+  color: white;
+  font-weight: bold;
+}

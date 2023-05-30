@@ -1,0 +1,12 @@
+
+  <!--   <% @current_level.materials.each do |material| %>
+      <div><%= image_tag "materials/#{material.name}.png" %></div>
+    <% end %>
+  </div>-->
+
+<%# choose which material to display %>
+
+<div class="cards" style="margin: 0 42px;">
+  <div class="grid mt-5" data-active-target="cards" data-computations-target="cards" data-matsid="<%= @matsid %>">
+  </div>
+</div>
